@@ -61,14 +61,14 @@ def print_account_details(account):
     print(f"Type: {account.display_account_type()}")
     print("-" * 40)
 
-acc1 = SavingsAccount("SA123", 1200)
-acc2 = CurrentAccount("CA456", 200)
+acc1 = SavingsAccount("SA123", 0)
+acc2 = CurrentAccount("CA456", 0)
 
-acc1.deposit(500)
-acc1.withdraw(300)
+acc1.deposit(1500)
+acc1.withdraw(200)
 
-acc2.deposit(500)
-acc2.withdraw(6000)
+acc2.deposit(700)
+acc2.withdraw(900)
 
 print_account_details(acc1)
 print_account_details(acc2)
