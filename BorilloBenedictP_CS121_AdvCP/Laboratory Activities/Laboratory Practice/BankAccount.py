@@ -65,7 +65,7 @@ acc1 = SavingsAccount("SA123", 0)
 acc2 = CurrentAccount("CA456", 0)
 
 acc1.deposit(1500)
-acc1.withdraw(200)
+acc1.withdraw(300)
 
 acc2.deposit(700)
 acc2.withdraw(900)
