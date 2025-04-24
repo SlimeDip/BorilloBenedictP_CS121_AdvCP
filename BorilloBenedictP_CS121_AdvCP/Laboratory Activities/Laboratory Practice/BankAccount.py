@@ -75,6 +75,9 @@ def print_account_details(account):
 acc1 = SavingsAccount()
 acc2 = CurrentAccount()
 
+acc1.account_number = "SA123"
+acc2.account_number = "CA456"
+
 acc1.balance = 0
 acc2.balance = 0
 
