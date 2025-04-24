@@ -1,17 +1,28 @@
 from abc import ABC, abstractmethod
 
 class BankAccount(ABC):
-    def __init__(self, account_number, balance):
-        self._account_number = account_number
-        self._balance = balance
+    def __init__(self):
+        self._account_number = ""
+        self._balance = 0
 
     @property
     def account_number(self):
         return self._account_number
+    
+    @account_number.setter
+    def account_number(self, get_account_number):
+        self._account_number = get_account_number
 
     @property
     def balance(self):
         return self._balance
+    
+    @balance.setter
+    def balance(self, add_balance):
+        if add_balance > 0:
+            self._balance = add_balance
+        else:
+            self._balance = 0
 
     @abstractmethod
     def deposit(self, amount):
@@ -61,8 +72,11 @@ def print_account_details(account):
     print(f"Type: {account.display_account_type()}")
     print("-" * 40)
 
-acc1 = SavingsAccount("SA123", 0)
-acc2 = CurrentAccount("CA456", 0)
+acc1 = SavingsAccount()
+acc2 = CurrentAccount()
+
+acc1.balance = 0
+acc2.balance = 0
 
 acc1.deposit(1500)
 acc1.withdraw(300)
